@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('img/bg2.png') no-repeat center center/cover;
+            background-color: #ffffff;
+        }
+        .welcome-message {
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background-color: rgba(186, 129, 243, 0); /* Transparent white background */
+            backdrop-filter: blur(15px); /* Blur effect */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .logout-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #06c0ef;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .logout-button:hover {
+            background-color: #04b0e1; /* Darker shade on hover */
+            transform: scale(1.05); /* Scale up slightly on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">
+        <p>Hello Guys, My name is Mritunjay</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function logout() {
+            // Redirect to login page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

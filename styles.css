@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('img/bg.png') no-repeat center center/cover;
+}
+
+.login-box {
+    position: relative;
+    width: 400px;
+    height: auto; /* Adjusted to accommodate varying content height */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    border: 2px solid rgb(248, 246, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Added padding for better spacing */
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+
+.input-box {
+    position: relative;
+    width: 100%; /* Adjusted to full width */
+    margin: 30px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+}
+
+.remember-forgot {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.remember-forgot label input {
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #10f500;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #06c0ef;
+    border: 1px dashed rgb(246, 246, 246);
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+button:hover {
+    background-color: #04b0e1;
+    transform: scale(1.05);
+}
+
+.register-link {
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0 10px;
+    color: #fff;
+}
+
+.register-link p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #10f500;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Error message style */
+.error-message {
+    color: #f00;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px; /* Added margin for spacing */
+    display: none; /* Initially hidden */
+}
+
